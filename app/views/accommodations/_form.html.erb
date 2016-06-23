@@ -1,0 +1,137 @@
+<%= form_for(@accommodation) do |f| %>
+  <% if @accommodation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@accommodation.errors.count, "error") %> prohibited this accommodation from being saved:</h2>
+
+      <ul>
+      <% @accommodation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :destination_id %><br>
+    <%= f.collection_select(:destination_id, Destination.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :accommodation_category_id %><br>
+    <%= f.collection_select(:accommodation_category_id, AccommodationCategory.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :web_address %><br>
+    <%= f.text_field :web_address %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :has_beach %><br>
+    <%= f.number_field :has_beach %>
+  </div>
+  <div class="field">
+    <%= f.label :has_casino %><br>
+    <%= f.number_field :has_casino %>
+  </div>
+  <div class="field">
+    <%= f.label :is_all_inclusive %><br>
+    <%= f.number_field :is_all_inclusive %>
+  </div>
+  <div class="field">
+    <%= f.label :is_family_friendly %><br>
+    <%= f.number_field :is_family_friendly %>
+  </div>
+  <div class="field">
+    <%= f.label :show_email %><br>
+    <%= f.check_box :show_email %>
+  </div>
+  <div class="field">
+    <%= f.label :show_web_address %><br>
+    <%= f.check_box :show_web_address %>
+  </div>
+  <div class="field">
+    <%= f.label :show_listings %><br>
+    <%= f.check_box :show_listings %>
+  </div>
+  <div class="field">
+    <%= f.label :qualification_level %><br>
+    <%= f.number_field :qualification_level %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_at %><br>
+    <%= f.datetime_select :modified_at %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.text_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :num_photos %><br>
+    <%= f.number_field :num_photos %>
+  </div>
+  <div class="field">
+    <%= f.label :has_internet %><br>
+    <%= f.check_box :has_internet %>
+  </div>
+  <div class="field">
+    <%= f.label :is_near_golf_course %><br>
+    <%= f.check_box :is_near_golf_course %>
+  </div>
+  <div class="field">
+    <%= f.label :has_logo %><br>
+    <%= f.check_box :has_logo %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_contact %><br>
+    <%= f.text_field :admin_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_email %><br>
+    <%= f.text_field :admin_email %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_phone %><br>
+    <%= f.text_field :admin_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :hotel_url %><br>
+    <%= f.text_field :hotel_url %>
+  </div>
+  <div class="field">
+    <%= f.label :affiliate_url %><br>
+    <%= f.text_field :affiliate_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
