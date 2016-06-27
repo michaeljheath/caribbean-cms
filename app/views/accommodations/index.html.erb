@@ -1,8 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <p id="notice"><%= notice %></p>
 
-<h1>Listing Accommodations</h1>
+  <h1>Listing Accommodations</h1>
 
-<table>
+  <div>
+    <%= link_to 'New Accommodation', new_accommodation_path, class: 'btn btn-info' %>
+  </div>
+
+  <div class="digg_pagination">
+    <%= will_paginate @accommodation %>
+  </div>
+
+  <table>
   <thead>
     <tr>
       <th>Destination</th>
@@ -15,7 +24,6 @@
       <th>Email</th>
       <th>Web address</th>
       <th>Details</th>
-      <th>Description</th>
       <th>Has beach</th>
       <th>Has casino</th>
       <th>Is all inclusive</th>
@@ -59,7 +67,6 @@
         <td><%= accommodation.email %></td>
         <td><%= accommodation.web_address %></td>
         <td><%= accommodation.details %></td>
-        <td><%= accommodation.description %></td>
         <td><%= accommodation.has_beach %></td>
         <td><%= accommodation.has_casino %></td>
         <td><%= accommodation.is_all_inclusive %></td>
@@ -78,14 +85,16 @@
         <td><%= accommodation.admin_phone %></td>
         <td><%= accommodation.hotel_url %></td>
         <td><%= accommodation.affiliate_url %></td>
-        <td><%= link_to 'Show', accommodation %></td>
-        <td><%= link_to 'Edit', edit_accommodation_path(accommodation) %></td>
-        <td><%= link_to 'Destroy', accommodation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', accommodation, class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_accommodation_path(accommodation), class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Destroy', accommodation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+  <div class="digg_pagination">
+  <%= will_paginate @accommodation %>
+  </div>
 
-<%= link_to 'New Accommodation', new_accommodation_path %>
+</div>

@@ -4,7 +4,7 @@ class AccommodationsController < ApplicationController
   # GET /accommodations
   # GET /accommodations.json
   def index
-    @accommodations = Accommodation.all
+    @accommodations = Accommodation.all.paginate(:page => params[:page],:per_page => 50)
   end
 
   # GET /accommodations/1

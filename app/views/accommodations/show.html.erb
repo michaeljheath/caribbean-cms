@@ -2,12 +2,12 @@
 
 <p>
   <strong>Destination:</strong>
-  <%= @accommodation.destination %>
+  <%= @accommodation.destination.name %>
 </p>
 
 <p>
   <strong>Accommodation category:</strong>
-  <%= @accommodation.accommodation_category %>
+  <%= @accommodation.accommodation_category.name %>
 </p>
 
 <p>
@@ -145,10 +145,6 @@
   <%= @accommodation.affiliate_url %>
 </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @accommodation.country %>
-</p>
 
-<%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |
-<%= link_to 'Back', accommodations_path %>
+<%= link_to 'Edit', edit_accommodation_path(@accommodation),class: 'btn btn-primary' %> |
+<%= link_to 'Back', accommodations_path, class: 'btn btn-primary' %>
