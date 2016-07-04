@@ -1,5 +1,5 @@
 class AccommodationsController < ApplicationController
-  before_action :set_accommodation, only: [:show, :edit, :update, :destroy]
+  before_action :set_accommodation, only: [:show, :edit, :update, :destroy,]
 
   # GET /accommodations
   # GET /accommodations.json
@@ -59,6 +59,20 @@ class AccommodationsController < ApplicationController
       format.html { redirect_to accommodations_url, notice: 'Accommodation was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def searchById
+    # code here
+    id = params[:@accommodation][:id]
+    @accommodation = Accommodation.find(id)
+    render action: 'show'
+  end
+
+  def searchByName
+    # code here
+    name = params[:@accommodation][:name]
+    @accommodations = Accommodation.where('name LIKE ?', "%#{params[:@accommodation][:name]}%").paginate(:page => params[:page],:per_page => 50)
+    render :'accommodations/index'
   end
 
   private

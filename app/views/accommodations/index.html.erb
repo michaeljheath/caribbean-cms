@@ -3,6 +3,22 @@
 
   <h1>Listing Accommodations</h1>
 
+
+  <div>
+    <%=	form_tag 'searchById', method: :get do %>
+        <%=	 label_tag 'Search By ID:' %>
+        <%= search_field(:@accommodation, :id) %>
+    <% end %>
+  </div>
+
+  <div>
+    <%=	form_tag 'searchByName', method: :get do %>
+        <%=	 label_tag 'Search By Name:' %>
+        <%= search_field(:@accommodation, :name) %>
+    <% end %>
+  </div>
+
+
   <div>
     <%= link_to 'New Accommodation', new_accommodation_path, class: 'btn btn-info' %>
   </div>

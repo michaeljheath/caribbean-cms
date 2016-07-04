@@ -10,6 +10,9 @@ input[type="submit"]{
     background-color: #337ab7;
     border-color: #2e6da4;
 }
+
+div{padding-top: 10px;}
+
 .digg_pagination {
     background: white;
     cursor: default;
