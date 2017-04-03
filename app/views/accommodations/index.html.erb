@@ -30,7 +30,7 @@
   <table>
   <thead>
     <tr>
-      <th>Destination</th>
+      <th>Location</th>
       <th>Category</th>
       <th>Name</th>
       <th>Price</th>
@@ -65,10 +65,10 @@
   <tbody>
     <% @accommodations.each do |accommodation| %>
       <tr>
-        <% if (accommodation.destination.nil?) %>
+        <% if (accommodation.location.nil?) %>
             <td>nil</td>
         <% else %>
-            <td><%= accommodation.destination.name %></td>
+            <td><%= accommodation.location.name  %></td>
         <% end %>
         <% if (accommodation.accommodation_category.nil?) %>
             <td>nil</td>
@@ -87,14 +87,14 @@
         <td><%= accommodation.has_casino %></td>
         <td><%= accommodation.is_all_inclusive %></td>
         <td><%= accommodation.is_family_friendly %></td>
+        <td><%= accommodation.has_internet %></td>
+        <td><%= accommodation.is_near_golf_course %></td>
         <td><%= accommodation.show_email %></td>
         <td><%= accommodation.show_web_address %></td>
         <td><%= accommodation.show_listings %></td>
         <td><%= accommodation.qualification_level %></td>
-        <td><%= accommodation.modified_at %></td>
+        <td><%= accommodation.time_modified %></td>
         <td><%= accommodation.num_photos %></td>
-        <td><%= accommodation.has_internet %></td>
-        <td><%= accommodation.is_near_golf_course %></td>
         <td><%= accommodation.has_logo %></td>
         <td><%= accommodation.admin_contact %></td>
         <td><%= accommodation.admin_email %></td>

@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :destination_id %><br>
-    <%= f.collection_select(:destination_id, Destination.all, :id, :name) %>
+    <%= f.label :location_id %><br>
+    <%= f.collection_select(:location_id, Location.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :accommodation_category_id %><br>
@@ -57,19 +57,31 @@
   </div>
   <div class="field">
     <%= f.label :has_beach %><br>
-    <%= f.number_field :has_beach %>
+    <%= f.check_box :has_beach %>
   </div>
   <div class="field">
     <%= f.label :has_casino %><br>
-    <%= f.number_field :has_casino %>
+    <%= f.check_box :has_casino %>
   </div>
   <div class="field">
     <%= f.label :is_all_inclusive %><br>
-    <%= f.number_field :is_all_inclusive %>
+    <%= f.check_box :is_all_inclusive %>
   </div>
   <div class="field">
     <%= f.label :is_family_friendly %><br>
-    <%= f.number_field :is_family_friendly %>
+    <%= f.check_box :is_family_friendly %>
+  </div>
+  <div class="field">
+    <%= f.label :has_internet %><br>
+    <%= f.check_box :has_internet %>
+  </div>
+  <div class="field">
+    <%= f.label :is_near_golf_course %><br>
+    <%= f.check_box :is_near_golf_course %>
+  </div>
+  <div class="field">
+    <%= f.label :has_logo %><br>
+    <%= f.check_box :has_logo %>
   </div>
   <div class="field">
     <%= f.label :show_email %><br>
@@ -89,7 +101,7 @@
   </div>
   <div class="field">
     <%= f.label :modified_at %><br>
-    <%= f.datetime_select :modified_at %>
+    <%= f.datetime_select :time_modified %>
   </div>
   <div class="field">
     <%= f.label :customer_id %><br>
@@ -99,18 +111,7 @@
     <%= f.label :num_photos %><br>
     <%= f.number_field :num_photos %>
   </div>
-  <div class="field">
-    <%= f.label :has_internet %><br>
-    <%= f.check_box :has_internet %>
-  </div>
-  <div class="field">
-    <%= f.label :is_near_golf_course %><br>
-    <%= f.check_box :is_near_golf_course %>
-  </div>
-  <div class="field">
-    <%= f.label :has_logo %><br>
-    <%= f.check_box :has_logo %>
-  </div>
+
   <div class="field">
     <%= f.label :admin_contact %><br>
     <%= f.text_field :admin_contact %>

@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'will_paginate', '~> 3.1.0'
-
+gem "paperclip", "~> 5.0.0"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,3 +47,4 @@ group :development do
   gem 'spring'
 end
 
+gem 'puma'

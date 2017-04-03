@@ -83,6 +83,6 @@ class AccommodationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accommodation_params
-      params.require(:accommodation).permit(:destination_id, :accommodation_category_id, :name, :price, :telephone, :fax, :address, :email, :web_address, :details, :description, :has_beach, :has_casino, :is_all_inclusive, :is_family_friendly, :show_email, :show_web_address, :show_listings, :qualification_level, :modified_at, :customer_id, :num_photos, :has_internet, :is_near_golf_course, :has_logo, :admin_contact, :admin_email, :admin_phone, :hotel_url, :affiliate_url, :country_id)
+      params.require(:accommodation).permit(:location_id, :accommodation_category_id, :name, :price, :telephone, :fax, :address, :email, :web_address, :details, :description, :has_beach, :has_casino, :is_all_inclusive, :is_family_friendly, :show_email, :show_web_address, :show_listings, :qualification_level, :modified_at, :customer_id, :num_photos, :has_internet, :is_near_golf_course, :has_logo, :admin_contact, :admin_email, :admin_phone, :hotel_url, :affiliate_url, :country_id)
     end
 end
