@@ -74,7 +74,20 @@
   <strong>Is family friendly:</strong>
   <%= @accommodation.is_family_friendly %>
 </p>
+<p>
+  <strong>Has internet:</strong>
+  <%= @accommodation.has_internet %>
+</p>
 
+<p>
+  <strong>Is near golf course:</strong>
+  <%= @accommodation.is_near_golf_course %>
+</p>
+
+<p>
+  <strong>Has logo:</strong>
+  <%= @accommodation.has_logo %>
+</p>
 <p>
   <strong>Show email:</strong>
   <%= @accommodation.show_email %>
@@ -99,27 +112,6 @@
   <strong>Modified at:</strong>
   <%= @accommodation.time_modified %>
 </p>
-
-<p>
-  <strong>Num photos:</strong>
-  <%= @accommodation.num_photos %>
-</p>
-
-<p>
-  <strong>Has internet:</strong>
-  <%= @accommodation.has_internet %>
-</p>
-
-<p>
-  <strong>Is near golf course:</strong>
-  <%= @accommodation.is_near_golf_course %>
-</p>
-
-<p>
-  <strong>Has logo:</strong>
-  <%= @accommodation.has_logo %>
-</p>
-
 <p>
   <strong>Admin contact:</strong>
   <%= @accommodation.admin_contact %>
@@ -141,10 +133,14 @@
 </p>
 
 <p>
-  <strong>Affiliate url:</strong>
-  <%= @accommodation.affiliate_url %>
+  <strong>Photo:</strong>
 </p>
 
+<p>
+  <% if(@accommodation.photo?) %>
+      <%= image_tag @accommodation.photo.url(:thumb) %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_accommodation_path(@accommodation),class: 'btn btn-primary' %> |
 <%= link_to 'Back', accommodations_path, class: 'btn btn-primary' %>

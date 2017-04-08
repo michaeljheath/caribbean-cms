@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'accommodations#index'
 
-  get 'searchById' => 'accommodations#searchById'
-  get 'searchByName' => 'accommodations#searchByName'
-  get 'searchByCountry' => 'accommodations#searchByCountry'
+  get 'search_by_id' => 'accommodations#search_by_id'
+  get 'search_by_name' => 'accommodations#search_by_name'
+  get 'search_by_country' => 'accommodations#search_by_country'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
