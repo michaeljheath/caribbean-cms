@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, size:30, :maxlength=>"254"%>
   </div>
   <div class="field">
     <%= f.label :price %><br>
@@ -37,23 +37,23 @@
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_area :address, cols:"29", rows:"3"%>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, size:30, :maxlength=>"254" %>
   </div>
   <div class="field">
     <%= f.label :web_address %><br>
-    <%= f.text_field :web_address %>
+    <%= f.text_field :web_address, size:30, :maxlength=>"254" %>
   </div>
   <div class="field">
     <%= f.label :details %><br>
-    <%= f.text_field :details %>
+    <%= f.text_area :details, cols:"29", rows:"3" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, cols:"29", rows:"3" %>
   </div>
   <div class="field">
     <%= f.label :has_beach %><br>
@@ -104,33 +104,24 @@
     <%= f.datetime_select :time_modified %>
   </div>
   <div class="field">
-    <%= f.label :customer_id %><br>
+    <strong>Customer ID:</strong><br>
     <%= f.text_field :customer_id %>
   </div>
   <div class="field">
-    <%= f.label :num_photos %><br>
-    <%= f.number_field :num_photos %>
-  </div>
-
-  <div class="field">
     <%= f.label :admin_contact %><br>
-    <%= f.text_field :admin_contact %>
+    <%= f.text_field :admin_contact, size:30, :maxlength=>"254" %>
   </div>
   <div class="field">
     <%= f.label :admin_email %><br>
-    <%= f.text_field :admin_email %>
+    <%= f.text_field :admin_email, size:30, :maxlength=>"254" %>
   </div>
   <div class="field">
     <%= f.label :admin_phone %><br>
-    <%= f.text_field :admin_phone %>
+    <%= f.text_field :admin_phone, size:30, :maxlength=>"254" %>
   </div>
   <div class="field">
-    <%= f.label :hotel_url %><br>
-    <%= f.text_field :hotel_url %>
-  </div>
-  <div class="field">
-    <%= f.label :affiliate_url %><br>
-    <%= f.text_field :affiliate_url %>
+    <strong>Expedia ID:</strong><br>
+    <%= f.text_field :expedia_hotel_id %>
   </div>
   <div class="field">
     <p><%= f.label :photo %></p>

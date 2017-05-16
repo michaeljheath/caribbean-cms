@@ -11,7 +11,7 @@ class Accommodation < ActiveRecord::Base
   has_attached_file :photo,
                     :path => "#{Rails.root}/public/photo_attachment/:id/:style/:basename.:extension",
                     :url => "/photo_attachment/:id/:style/:basename.:extension",
-                    styles: { thumb: ["300x300#", :jpg] }
+                    styles: { thumb: ["150x150#", :jpg], detail: ["500x500"] }
 
   validates_attachment :photo,
                        content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
